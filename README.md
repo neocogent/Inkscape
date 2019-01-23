@@ -1,45 +1,10 @@
-# Various Inkscape extensions
+# Raster 2 Laser GCode generator for Inkscape
 
- - Raster 2 Laser GCode generator
- - 
- 
-#Descriptions
-- Raster 2 Laser GCode generator is an extension to generate Gcode for a laser cutter/engraver (or pen plotter), it can generate various type of outputs from a simple B&W (on/off) to a more detailed Grayscale (pwm)
+Modified version of the 305Engineering extension adding several options:
 
-
-#Installing:
-
-Simply copy all the files in the folder "Extensions" of Inkscape
-
->Windows ) "C:\<...>\Inkscape\share\extensions"
-
->Linux ) "/usr/share/inkscape/extensions"
-
->Mac ) "/Applications/Inkscape.app/Contents/Resources/extensions"
+Speed OFF - set moving speed independently of engave speed
+Dwell - add in dwell command before laser changes - fixes errors causing engrave inversion, use -1 value to disable
+Initial Z position - for setting the bed height before starting (only useful for 3D laser conversions)
+Reset Position - whether to output a G92 command that resets position to 0,0 but causes Z axis reset as well
 
 
-for unix (& mac maybe) change the permission on the file:
-
->>chmod 755 for all the *.py files
-
->>chmod 644 for all the *.inx files
-
-
-
-#Usage of "Raster 2 Laser GCode generator":
-
-[Required file: png.py / raster2laser_gcode.inx / raster2laser_gcode.py]
-
-- Step 1) Resize the inkscape document to match the dimension of your working area on the laser cutter/engraver (Shift+Ctrl+D)
-
-- Step 2) Draw or import the image
-
-- Step 3) To run the extension go to: Extension > 305 Engineering > Raster 2 Laser GCode generator
-
-- Step 4) Play!
-
-
-
-
-#Note
-I have created all the file except for png.py , see that file for details on the license
